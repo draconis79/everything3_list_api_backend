@@ -1011,3 +1011,190 @@ Processing by ListsController#index as HTML
 Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 19:54:37 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/lists" for 127.0.0.1 at 2018-01-30 19:54:44 -0800
+Processing by ListsController#create as HTML
+  Parameters: {"category"=>"working", "list"=>{"category"=>"working"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mList Create (2.1ms)[0m  [1m[32mINSERT INTO "lists" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "working"], ["created_at", "2018-01-31 03:54:44.443391"], ["updated_at", "2018-01-31 03:54:44.443391"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 12ms (Views: 0.7ms | ActiveRecord: 8.1ms)
+
+
+Started DELETE "/lists/10" for 127.0.0.1 at 2018-01-30 19:54:47 -0800
+Processing by ListsController#destroy as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 10]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 9ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 19:54:47 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 20:45:46 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 20:47:06 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 20:50:09 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 20:55:54 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/lists" for 127.0.0.1 at 2018-01-30 20:56:21 -0800
+Processing by ListsController#create as HTML
+  Parameters: {"category"=>"grocery shop", "list"=>{"category"=>"grocery shop"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "grocery shop"], ["created_at", "2018-01-31 04:56:21.698898"], ["updated_at", "2018-01-31 04:56:21.698898"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 10ms (Views: 0.7ms | ActiveRecord: 6.4ms)
+
+
+Started PUT "/lists/11" for 127.0.0.1 at 2018-01-30 20:57:07 -0800
+Processing by ListsController#update as HTML
+  Parameters: {"category"=>"Grocery", "id"=>"11", "list"=>{"category"=>"Grocery"}}
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mList Update (0.5ms)[0m  [1m[33mUPDATE "lists" SET "category" = $1, "updated_at" = $2 WHERE "lists"."id" = $3[0m  [["category", "Grocery"], ["updated_at", "2018-01-31 04:57:07.892069"], ["id", 11]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 20:57:07 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 11]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/lists/11" for 127.0.0.1 at 2018-01-30 20:57:08 -0800
+Processing by ListsController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 11]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 8ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 20:57:08 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/lists/4" for 127.0.0.1 at 2018-01-30 21:05:35 -0800
+Processing by ListsController#update as HTML
+  Parameters: {"category"=>"list weights", "id"=>"4", "list"=>{"category"=>"list weights"}}
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mList Update (0.4ms)[0m  [1m[33mUPDATE "lists" SET "category" = $1, "updated_at" = $2 WHERE "lists"."id" = $3[0m  [["category", "list weights"], ["updated_at", "2018-01-31 05:05:35.344381"], ["id", 4]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:05:35 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:13:42 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:19:01 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:19:14 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:25:18 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:25:23 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:40:26 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-01-30 21:42:10 -0800
+Processing by ListsController#index as HTML
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 5]]
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."list_id" = $1[0m  [["list_id", 4]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
